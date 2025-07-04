@@ -35,6 +35,10 @@ void lcd_send_data(uint8_t data) {
     lcd_send_internal(data, LCD_RS);
 }
 
+// char *str = "HELLO"; 
+// *str = H
+// *str + 1 = E 
+// *str == \0
 void lcd_send_string(char *str) {
     while (*str) {
         lcd_send_data((uint8_t)(*str));
